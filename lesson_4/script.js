@@ -1,53 +1,53 @@
 // Task 1
 
-// function numberToObject(num) {
-//     if (!(typeof num === 'number')) {
-//         console.log("Это не число");
-//         return {};
-//     }
-//     if ((!Number.isInteger(num)) || (num < 0) || (num > 999)) {
-//         console.log("Это недопустимое число");
-//         return {};
-//     }
-//     let result = {
-//         units: 0,
-//         tens: 0,
-//         hundreds: 0,
-//     };
+function numberToObject(num) {
+    if (!(typeof num === 'number')) {
+        console.log("Это не число");
+        return {};
+    }
+    if ((!Number.isInteger(num)) || (num < 0) || (num > 999)) {
+        console.log("Это недопустимое число");
+        return {};
+    }
+    let result = {
+        units: 0,
+        tens: 0,
+        hundreds: 0,
+    };
 
-//     result.units = num % 10;
-//     result.tens = Math.floor((num % 100) / 10);
-//     result.hundreds = Math.floor(num / 100);
+    result.units = num % 10;
+    result.tens = Math.floor((num % 100) / 10);
+    result.hundreds = Math.floor(num / 100);
 
-//     return result;
-// }
+    return result;
+}
 
-// console.log(numberToObject(3));
+console.log(numberToObject(3));
 
 // Task 1.1
 
-// function Product(name, price) {
-//     this.name = name;
-//     this.price = price;
-// }
-// Product.prototype.make25PercentDiscount = function () {
-//     this.price *= 0.75;
-// };
+function Product(name, price) {
+    this.name = name;
+    this.price = price;
+}
+Product.prototype.make25PercentDiscount = function () {
+    this.price *= 0.75;
+};
 
-// class Product {
-//     constructor(name, price) {
-//         this.name = name;
-//         this.price = price;
-//     }
+class Product {
+    constructor(name, price) {
+        this.name = name;
+        this.price = price;
+    }
 
-//     make25PercentDiscount() {
-//         this.price *= 0.75;
-//     };
-// }
+    make25PercentDiscount() {
+        this.price *= 0.75;
+    };
+}
 
-// let prod_1 = new Product("Beer", 100);
-// prod_1.make25PercentDiscount();
-// console.log(prod_1.price);
+let prod_1 = new Product("Beer", 100);
+prod_1.make25PercentDiscount();
+console.log(prod_1.price);
 
 // Task 1.2
 
